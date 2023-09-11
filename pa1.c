@@ -5,42 +5,7 @@
  * @date    2023-09-06
  * 
  */
-#define MAXTOKEN 256
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <string.h>
-
-int getTokens(char *s, char ***args);
-
-int main()  //int argc, char *argv[]
-{
-    char **arrOfTokens=malloc(sizeof(char*)), *input;
-    char buffer[MAXTOKEN];
-
-    printf("%s\n","Please, enter the string: ");
-    
-    // get user string and get rid of trailing \n
-    input=fgets(buffer,MAXTOKEN,stdin);
-    if (input[strlen(input) - 1] == '\n')
-    {
-        input[strlen(input) - 1] = '\0';
-    }
-
-    // create tokens
-    int numTokens = getTokens(input, &arrOfTokens);
-
-    // display tokens
-    printf("\nTotal Number of Tokens = %i\n",numTokens);
-    for(int i=0;i<=numTokens;i++)
-    {
-        printf("Token %i: %s\n",i,(arrOfTokens)[i]);
-    }
-    return 0;
-}
-
+#include "pa1.h"
 /**
  * @brief Get the Tokens object
  * 
