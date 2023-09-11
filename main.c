@@ -9,7 +9,7 @@
 #include "pa1.h"
 int main()  //int argc, char *argv[]
 {
-    char **arrOfTokens=malloc(MAXTOKEN), *input; //
+    char **arrOfTokens=malloc(MAXTOKEN), *input;
     char buffer[MAXTOKEN];
 
     printf("%s\n","Please, enter the string: ");
