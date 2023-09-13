@@ -7,10 +7,10 @@ CC = gcc
 FLAGS = -Wall -g
 
 pa1: main.o pa1.o
-	$(CC) $(FLAGS) main.o pa1.o -o pa1
+	$(CC) $(FLAGS) main.o pa1.o -o $@
 
 main.o: main.c pa1.h
-	$(CC) $(FLAGS) -c main.c
+	$(CC) $(FLAGS) -c $<
 
-pa1.0: pa1.c pa1.h
-	$(CC) $(FLAGS) -c pa1.c
+pa1.o: pa1.c pa1.h
+	$(CC) $(FLAGS) -c $<
